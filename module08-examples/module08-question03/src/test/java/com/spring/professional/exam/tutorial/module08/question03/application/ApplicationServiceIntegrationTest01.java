@@ -6,6 +6,7 @@ import com.spring.professional.exam.tutorial.module08.question03.integration.tes
 import com.spring.professional.exam.tutorial.module08.question03.service.GuestSharableDataService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
 
 import java.util.List;
 import java.util.Set;
@@ -15,8 +16,9 @@ import static com.spring.professional.exam.tutorial.module08.question03.integrat
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD;
 
-//@DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
+@DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
 public class ApplicationServiceIntegrationTest01 extends IntegrationTestBase {
 
     @Autowired

@@ -66,6 +66,11 @@ public class ApplicationServiceIntegrationTest {
         System.out.println("BEFORE TRANSACTION");
     }
 
+    @BeforeTransaction
+    private void beforeTransaction2() {
+        System.out.println("BEFORE TRANSACTION");
+    }
+
     @AfterTransaction
     private void afterTransaction() {
         System.out.println("AFTER TRANSACTION");
