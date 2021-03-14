@@ -2,6 +2,7 @@ package com.spring.professional.exam.tutorial.module01.question29;
 
 import com.spring.professional.exam.tutorial.module01.question29.beans.SpringBean1;
 import com.spring.professional.exam.tutorial.module01.question29.beans.SpringBean2;
+import com.spring.professional.exam.tutorial.module01.question29.beans.SpringBean3;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Arrays;
@@ -34,5 +35,10 @@ public class Runner {
         System.out.println("getTaxValue = " + springBean2.getTaxValue());
         System.out.println("getTaxDepartmentName = " + springBean2.getTaxDepartmentName());
         System.out.println("getTaxDepartmentAlternateName = " + springBean2.getTaxDepartmentAlternateName());
+
+
+        SpringBean3 springBean3 = context.getBean(SpringBean3.class);
+        springBean3.setVal2(null);
+        System.out.println(springBean3.getVal2());
     }
 }
