@@ -22,9 +22,9 @@ public class EmployeeRepositoryAspect {
         System.out.println("after - " + joinPoint.getSignature());
     }
 
-    @AfterThrowing(value = "serviceOrSamePackageRepository()", throwing = "exception")
-    public void afterThrowing(JoinPoint joinPoint, Exception exception) {
-        System.out.println("after throwing exception - " + joinPoint.getSignature() + " - exception = " + exception);
+    @AfterThrowing(value = "serviceOrSamePackageRepository()", throwing = "exception1")
+    public void afterThrowing(JoinPoint joinPoint, Exception exception1) {
+        System.out.println("after throwing exception - " + joinPoint.getSignature() + " - exception = " + exception1);
     }
 
     @AfterReturning(value = "serviceOrSamePackageRepository()", returning = "returnValue")
