@@ -21,8 +21,7 @@ public class ApiControllerV2 {
 
     // curl localhost:8080/api/v2/customers |jq
     @GetMapping("customers")
-    @ResponseBody
-    public Iterable<Customer> listCustomers() {
+    public @ResponseBody Iterable<Customer> listCustomers() {
         return customersDao.findAll();
     }
 
